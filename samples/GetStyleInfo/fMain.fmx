@@ -1,0 +1,68 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object edtStylesPath: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Top
+    TabOrder = 0
+    Size.Width = 640.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    OnChange = edtStylesPathChange
+    object EllipsesEditButton1: TEllipsesEditButton
+      Touch.InteractiveGestures = [LongTap]
+      CanFocus = False
+      Cursor = crArrow
+      Size.Width = 28.000000000000000000
+      Size.Height = 18.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      OnClick = EllipsesEditButton1Click
+    end
+  end
+  object lbStyles: TListBox
+    Align = Left
+    Position.Y = 22.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 458.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    OnItemClick = lbStylesItemClick
+    Viewport.Width = 296.000000000000000000
+    Viewport.Height = 454.000000000000000000
+  end
+  object mmoInfos: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    ReadOnly = True
+    TextSettings.WordWrap = True
+    Align = Client
+    Size.Width = 331.000000000000000000
+    Size.Height = 458.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Viewport.Width = 327.000000000000000000
+    Viewport.Height = 454.000000000000000000
+  end
+  object Splitter1: TSplitter
+    Align = Left
+    Cursor = crHSplit
+    MinSize = 20.000000000000000000
+    Position.X = 300.000000000000000000
+    Position.Y = 22.000000000000000000
+    Size.Width = 9.000000000000000000
+    Size.Height = 458.000000000000000000
+    Size.PlatformDefault = False
+  end
+end
