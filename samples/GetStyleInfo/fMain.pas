@@ -1,3 +1,39 @@
+﻿(* C2PP
+  ***************************************************************************
+
+  FMX Styles Utils
+  Copyright (c) 2025-2026 Patrick PREMARTIN
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU Affero General Public License as
+  published by the Free Software Foundation, either version 3 of the
+  License, or (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU Affero General Public License for more details.
+
+  You should have received a copy of the GNU Affero General Public License
+  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+  ***************************************************************************
+
+  Author(s) :
+  Patrick PREMARTIN and Serge GIRARD
+
+  Site :
+  https://fmxstylesutils.developpeur-pascal.fr/
+
+  Project site :
+  https://github.com/DeveloppeurPascal/FMX-Styles-Utils
+
+  ***************************************************************************
+  File last update : 2026-01-08T13:12:04.000+01:00
+  Signature : afbfb106e95de013ca8bfbb1e1c4ce18fa523237
+  ***************************************************************************
+*)
+
 unit fMain;
 
 interface
@@ -117,6 +153,11 @@ begin
       style.SetDesign(true);
       mmoInfos.Lines.Add(tpath.GetFileNameWithoutExtension(filepath));
       style.LoadFromFile(filepath);
+      if (style.Style.Children[0] is TStyleDescription) then
+      begin
+        mmoInfos.Lines.Add('Title: ' + TStyleDescription(style.Style.Children[0]).title);
+        mmoInfos.Lines.Add('Platform: ' + TStyleDescription(style.Style.Children[0]).PlatformTarget);
+      end;
       mmoInfos.Lines.Add('--');
     finally
       style.Free;
