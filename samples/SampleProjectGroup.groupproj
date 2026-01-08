@@ -6,6 +6,9 @@
         <Projects Include="DarkLightSampleProject\DarkLightSample.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="GetStyleInfo\GetStyleInfoSample.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -23,14 +26,23 @@
     <Target Name="DarkLightSample:Make">
         <MSBuild Projects="DarkLightSampleProject\DarkLightSample.dproj" Targets="Make"/>
     </Target>
+    <Target Name="GetStyleInfoSample">
+        <MSBuild Projects="GetStyleInfo\GetStyleInfoSample.dproj"/>
+    </Target>
+    <Target Name="GetStyleInfoSample:Clean">
+        <MSBuild Projects="GetStyleInfo\GetStyleInfoSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GetStyleInfoSample:Make">
+        <MSBuild Projects="GetStyleInfo\GetStyleInfoSample.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="DarkLightSample"/>
+        <CallTarget Targets="DarkLightSample;GetStyleInfoSample"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="DarkLightSample:Clean"/>
+        <CallTarget Targets="DarkLightSample:Clean;GetStyleInfoSample:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="DarkLightSample:Make"/>
+        <CallTarget Targets="DarkLightSample:Make;GetStyleInfoSample:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
