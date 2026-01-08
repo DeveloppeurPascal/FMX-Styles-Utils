@@ -4,13 +4,15 @@
   <Summary>Developer documentation for the FMX Styles Utiles sample projects</Summary>
   <Author>Patrick PREMARTIN</Author>
   <Email>patrick@premartin.fr</Email>
-  <Copyright>(c) 2025 PATRICK PREMARTIN and SERGE GIRARD</Copyright>
+  <Copyright>(c) 2025-2026 PATRICK PREMARTIN and SERGE GIRARD</Copyright>
   <Comment/>
   <Language>2057</Language>
   <Charset>1</Charset>
+  <Theme>Learn</Theme>
   <HeaderHtml>&lt;%TopicTitle%&gt;</HeaderHtml>
-  <FooterHtml>&lt;a href="https://fmxstylesutils.developpeur-pascal.fr" target="_blank"&gt;FMX Styles Utils&lt;/a&gt; (c) 2025 &lt;a href="https://patrick.premartin.fr" target="_blank"&gt;Patrick PREMARTIN&lt;/a&gt; and &lt;a href="https://github.com/Serge-Girard" target="_blank"&gt;Serge GIRARD&lt;/a&gt; - Powered by &lt;a href="https://devjetsoftware.com/products/documentation-insight/" target="_blank"&gt;DocInsight&lt;/a&gt;</FooterHtml>
+  <FooterHtml>&lt;a href="https://fmxstylesutils.developpeur-pascal.fr" target="_blank"&gt;FMX Styles Utils&lt;/a&gt; (c) 2025-2026 &lt;a href="https://patrick.premartin.fr" target="_blank"&gt;Patrick PREMARTIN&lt;/a&gt; and &lt;a href="https://github.com/Serge-Girard" target="_blank"&gt;Serge GIRARD&lt;/a&gt; - Powered by &lt;a href="https://devjetsoftware.com/products/documentation-insight/" target="_blank"&gt;DocInsight&lt;/a&gt;</FooterHtml>
   <CustomDefines/>
+  <GlobalSearchPaths>false</GlobalSearchPaths>
   <ShowImplementationSection>false</ShowImplementationSection>
   <ShowPrivateMembers>false</ShowPrivateMembers>
   <ShowProtectedMembers>true</ShowProtectedMembers>
@@ -21,6 +23,7 @@
   <TargetPlatform>0</TargetPlatform>
   <Sources>
     <Source>.\DarkLightSampleProject\DarkLightSample.dpr</Source>
+    <Source>.\GetStyleInfo\GetStyleInfoSample.dpr</Source>
   </Sources>
   <Outputs>
     <Output Type="HTML">
@@ -28,7 +31,7 @@
       <OutputDirectory>..\docs\Samples</OutputDirectory>
     </Output>
     <Output Type="CHM">
-      <Active>true</Active>
+      <Active>false</Active>
       <OutputFileName>.\SampleProjectGroup.chm</OutputFileName>
     </Output>
     <Output Type="MSHELP2">
