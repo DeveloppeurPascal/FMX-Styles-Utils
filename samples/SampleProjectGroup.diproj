@@ -19,7 +19,7 @@
   <ShowInheritedMembers>true</ShowInheritedMembers>
   <ShowPropertyAccessors>true</ShowPropertyAccessors>
   <FileNamePolicy>0</FileNamePolicy>
-  <CompilerVersion>27</CompilerVersion>
+  <CompilerVersion>28</CompilerVersion>
   <TargetPlatform>0</TargetPlatform>
   <Sources>
     <Source>.\DarkLightSampleProject\DarkLightSample.dpr</Source>
